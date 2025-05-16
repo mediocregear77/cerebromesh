@@ -1,0 +1,61 @@
+// File: LICENSE.txt
+
+CEREBROMESH PROPRIETARY LICENSE AGREEMENT  
+Version 1.0 – Effective May 2025  
+Copyright © 2025 Jamie Terpening
+
+
+IMPORTANT: READ CAREFULLY BEFORE USING.  
+This software, known as *CerebroMesh*, including all code, architecture, documentation, datasets, models, user interfaces, and embedded logic ("the Software"), is the exclusive intellectual property of Jamie Terpening ("Licensor").
+
+
+1. OWNERSHIP
+
+The Software is proprietary and 100% owned by Jamie Terpening. No rights of use, distribution, resale, modification, or reproduction are granted without explicit, written authorization from the Licensor. This is **not open source**.
+
+
+2. PERMITTED USE
+
+You are permitted to:
+- Download and run the Software **only** for local, non-commercial testing and demonstration purposes.
+- Use the Software in isolated development environments to evaluate its capabilities.
+
+You are not permitted to:
+- Deploy the Software in production.
+- Offer it as a service (SaaS, PaaS, FaaS).
+- Modify, sublicense, resell, relicense, or redistribute it in any form.
+- Train other systems using data, patterns, or models derived from it.
+- Use any part of the Software for research, commercial, or governmental purposes without written permission.
+
+
+3. COMMERCIAL RESTRICTION
+
+Use of the Software or any derivative work for commercial gain, competitive benchmarking, enterprise operations, or integration into other platforms is strictly prohibited. Unauthorized use constitutes a breach of this agreement and will result in legal action.
+
+
+4. NON-DISCLOSURE
+
+By using the Software, you agree not to disclose, publish, or make public any portion of its source code, architecture, design principles, datasets, or results without express written consent.
+
+
+5. VIOLATION & LIABILITY
+
+Violating this license will result in immediate revocation of your rights to use the Software. Legal damages, including injunctions and financial penalties, may be pursued to the fullest extent permitted by law.
+
+
+6. LICENSE INQUIRIES
+
+To request authorization for production use, commercial licensing, or research access, contact:
+
+Jamie Terpening
+email_jamie@nexxuseos.com
+
+
+7. FINAL TERMS
+
+This license supersedes any open-source or permissive interpretations.  
+No part of the Software is MIT, GPL, BSD, or otherwise freely licensed.  
+Use without explicit permission is theft of intellectual property.
+
+
+By downloading, executing, or modifying this Software, you agree to all terms of this license.

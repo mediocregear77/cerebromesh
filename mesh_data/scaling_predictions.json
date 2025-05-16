@@ -1,0 +1,31 @@
+// File: mesh_data/scaling_predictions.json
+
+[
+  {
+    "timestamp": 1715799732,
+    "route": "/checkout",
+    "forecast": {
+      "expected_rps": 4820.7,
+      "stdev": 210.4,
+      "recommendation": "scale_up"
+    }
+  },
+  {
+    "timestamp": 1715799758,
+    "route": "/orders",
+    "forecast": {
+      "expected_rps": 935.2,
+      "stdev": 95.6,
+      "recommendation": "hold"
+    }
+  },
+  {
+    "timestamp": 1715799784,
+    "route": "/cart",
+    "forecast": {
+      "expected_rps": 76.3,
+      "stdev": 23.9,
+      "recommendation": "scale_down"
+    }
+  }
+]

@@ -1,0 +1,33 @@
+# File: deployment/docker-compose.yml
+
+version: "3.9"
+
+services:
+  cerebro-api:
+    container_name: cerebro_api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api_output:/app/api_output
+      - ./mesh_data:/app/mesh_data
+      - ./models:/app/models
+    environment:
+      - MODEL_PATH=models/mistral_quantized.gguf
+      - MEMORY_FILE=mesh_data/mesh_memory.json
+    command: ["uvicorn", "api_output.ecommerce_api.routes:router", "--host", "0.0.0.0", "--port", "8000"]
+
+  dashboard-ui:
+    container_name: cerebro_ui
+    build:
+      context: ./dx_core_ui
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dx_core_ui:/usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "start"]

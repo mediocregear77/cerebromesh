@@ -1,0 +1,53 @@
+// File: mesh_data/mesh_memory.json
+
+[
+  {
+    "event_id": "d8c47c2b-114f-41e0-a2b1-68e2075ef131",
+    "timestamp": 1715799467,
+    "event_type": "route_created",
+    "data": {
+      "path": "/checkout",
+      "method": "POST",
+      "description": "Processes user checkout"
+    },
+    "tags": ["api", "ecommerce", "generation"]
+  },
+  {
+    "event_id": "26f9f4b3-4c7a-4766-a3bc-8b2b278cf7cd",
+    "timestamp": 1715799493,
+    "event_type": "test_passed",
+    "data": {
+      "path": "/checkout",
+      "status": "200 OK",
+      "duration_ms": 112
+    },
+    "tags": ["test", "success", "swarm"]
+  },
+  {
+    "event_id": "5de7c2a1-91a2-470e-a1c0-bfe6b3de103b",
+    "timestamp": 1715799521,
+    "event_type": "route_created",
+    "data": {
+      "path": "/orders",
+      "method": "POST",
+      "description": "Creates a new user order"
+    },
+    "tags": ["api", "orders", "generation"]
+  },
+  {
+    "event_id": "eaac9271-4e17-44b4-9b14-d1aa7b89fcaf",
+    "timestamp": 1715799555,
+    "event_type": "decision_logged",
+    "data": {
+      "agent_id": "agent-001",
+      "action": {
+        "type": "route_add",
+        "path": "/orders",
+        "method": "POST",
+        "confidence": 0.91
+      },
+      "allowed": true
+    },
+    "tags": ["firewall", "decision", "agent"]
+  }
+]

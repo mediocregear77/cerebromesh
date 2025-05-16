@@ -1,0 +1,53 @@
+# File: deployment/k8s_manifest.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cerebro-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cerebro-api
+  template:
+    metadata:
+      labels:
+        app: cerebro-api
+    spec:
+      containers:
+        - name: cerebro-api-container
+          image: cerebromesh/api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: MODEL_PATH
+              value: "/models/mistral_quantized.gguf"
+            - name: MEMORY_FILE
+              value: "/mesh_data/mesh_memory.json"
+          volumeMounts:
+            - mountPath: /mesh_data
+              name: memory-volume
+            - mountPath: /models
+              name: model-volume
+      volumes:
+        - name: memory-volume
+          persistentVolumeClaim:
+            claimName: memory-pvc
+        - name: model-volume
+          persistentVolumeClaim:
+            claimName: model-pvc
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: cerebro-api-service
+spec:
+  selector:
+    app: cerebro-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer

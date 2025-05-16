@@ -1,0 +1,45 @@
+// File: mesh_data/compliance_audits.json
+
+[
+  {
+    "audit_id": "cmp-001",
+    "timestamp": 1715799810,
+    "module": "checkout",
+    "status": "pass",
+    "checks": [
+      "GDPR data retention: ✔",
+      "PCI payment handling: ✔",
+      "Tokenized user ID: ✔",
+      "Data export tool: ❌ (not implemented)"
+    ],
+    "risk_score": 12,
+    "notes": "All major compliance checks passed except data export compliance. Flagged for Q2 backlog."
+  },
+  {
+    "audit_id": "cmp-002",
+    "timestamp": 1715799846,
+    "module": "orders",
+    "status": "fail",
+    "checks": [
+      "HIPAA alignment: ❌",
+      "Audit logging: ✔",
+      "PHI encryption: ❌",
+      "Access logs: ✔"
+    ],
+    "risk_score": 71,
+    "notes": "Sensitive data appears in unencrypted fields. Immediate fix required before enterprise rollout."
+  },
+  {
+    "audit_id": "cmp-003",
+    "timestamp": 1715799873,
+    "module": "cart",
+    "status": "pass",
+    "checks": [
+      "User consent tracking: ✔",
+      "Anonymized analytics: ✔",
+      "Session expiration: ✔"
+    ],
+    "risk_score": 5,
+    "notes": "No red flags. All consent and privacy controls functioning as intended."
+  }
+]

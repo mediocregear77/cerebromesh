@@ -1,0 +1,52 @@
+// File: mesh_data/agent_logs.json
+
+[
+  {
+    "agent_id": "agent-001",
+    "timestamp": 1715799612,
+    "route": {
+      "path": "/checkout",
+      "method": "POST"
+    },
+    "outcome": "pass",
+    "reward": 1.0,
+    "q_update": {
+      "state": "test_state",
+      "action": "test:POST:/checkout",
+      "old_q": 0.0,
+      "new_q": 0.9
+    }
+  },
+  {
+    "agent_id": "agent-002",
+    "timestamp": 1715799639,
+    "route": {
+      "path": "/orders",
+      "method": "POST"
+    },
+    "outcome": "fail",
+    "reward": -1.0,
+    "q_update": {
+      "state": "test_state",
+      "action": "test:POST:/orders",
+      "old_q": 0.0,
+      "new_q": -0.9
+    }
+  },
+  {
+    "agent_id": "agent-001",
+    "timestamp": 1715799681,
+    "route": {
+      "path": "/cart",
+      "method": "GET"
+    },
+    "outcome": "timeout",
+    "reward": -0.5,
+    "q_update": {
+      "state": "test_state",
+      "action": "test:GET:/cart",
+      "old_q": 0.0,
+      "new_q": -0.45
+    }
+  }
+]

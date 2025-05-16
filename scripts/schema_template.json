@@ -1,0 +1,33 @@
+// File: scripts/schema_template.json
+
+{
+  "routes": [
+    {
+      "path": "/checkout",
+      "method": "POST",
+      "model": "CheckoutPayload",
+      "fields": {
+        "user_id": "int",
+        "payment_method": "str",
+        "items": "list"
+      }
+    },
+    {
+      "path": "/cart",
+      "method": "GET",
+      "model": "CartRequest",
+      "fields": {
+        "session_id": "str"
+      }
+    },
+    {
+      "path": "/orders",
+      "method": "POST",
+      "model": "CreateOrder",
+      "fields": {
+        "user_id": "int",
+        "items": "list"
+      }
+    }
+  ]
+}
